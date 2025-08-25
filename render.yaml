@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: time-service
+    env: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    region: oregon
+    buildCommand: ""
+    startCommand: ""
+    healthCheckPath: /health
+    envVars:
+      - key: PORT
+        value: 80
